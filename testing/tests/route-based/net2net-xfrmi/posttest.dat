@@ -3,8 +3,6 @@ moon::systemctl stop strongswan-swanctl
 sun::systemctl stop strongswan-swanctl
 moon::iptables-restore < /etc/iptables.flush
 sun::iptables-restore < /etc/iptables.flush
-moon::ip -s link show xfrm-moon-in
-moon::ip -s link show xfrm-moon-out
-moon::ip link del xfrm-moon-in
-moon::ip link del xfrm-moon-out
+moon::ip -s link show xfrm-moon
+moon::ip link del xfrm-moon
 sun::rm /etc/updown
